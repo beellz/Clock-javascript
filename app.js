@@ -2,7 +2,7 @@
 function clock() { 
 
     const fullDate = new Date();
-    var hours = fullDate.getHours();
+    var hours = (fullDate.getHours() % 12);
     var mins  = fullDate.getMinutes();
     var sec = fullDate.getSeconds();
 
