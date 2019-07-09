@@ -2,9 +2,11 @@
 function clock() { 
 
     const fullDate = new Date();
-    var hours = (fullDate.getHours() % 12);
+    var fullhour = (fullDate.getHours());
+    var hours = (fullDate.getHours() % 12 || 12);
     var mins  = fullDate.getMinutes();
     var sec = fullDate.getSeconds();
+    var AmPm = (fullhour >= 12) ? "PM" : "AM";
 
     if ( hours < 10) {
         hours = "0" + hours;
@@ -17,11 +19,11 @@ function clock() {
         sec = "0" + sec;
     }
     
-
     document.getElementById('hours').innerHTML = hours;
     document.getElementById('mins').innerHTML =":" + mins;
-    document.getElementById('sec').innerHTML =":" + sec;    
-    
+    document.getElementById('sec').innerHTML =":" + sec; 
+    document.getElementById('amPm').innerHTML = AmPm;   
+  
 }
 
 setInterval(clock , 100);
