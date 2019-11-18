@@ -38,6 +38,18 @@ body {
 
 }
 
+.links {
+    font-family: sans-serif ;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+}
+.link1 {
+    text-align: center;
+    padding: 50px;
+}
+
 .clock {
     background: #ebebeb;
     text-align: center;
